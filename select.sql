@@ -1,14 +1,21 @@
-SELECT * FROM `film`
+/*1. Tampilkan semua data untuk table film*/
+select id, film_name from film * FROM `film`;
 
-SELECT * FROM `category`
+/*2. Tampilkan semua data category yang memiliki id > 5*/
+select * from users where id > 5;
 
-SELECT *
-FROM 'category'
-WHERE category_id => 5;
- 
-SELECT * FROM 'cast'
+/*3. Tampilkan semua nama film dan nama categorynya.*/
+select u.name, f.film_name
+from users_film uf
+join users u on u.id = uf.user_id
+join film f on f.id = uf.film_id;
 
-SELECT f.film_name, c.tanggal_nonton
-FROM daftar_nonton
-JOIN film c on c.film_id = film_id
-JOIN user f on f user_id = d.category_id;
+/*4. Tampilkan semua nama artis dan film yang dibintangi oleh artis tsb*/
+
+
+/*5. Tampilkan nama film dan berapa kali film tersebut di tonton*/
+
+select u.name, count(uf.film_id)
+from users_film uf 
+join users u on u.id = uf.user_id
+group by u.name;

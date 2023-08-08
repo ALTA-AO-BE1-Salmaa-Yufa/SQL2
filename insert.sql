@@ -1,3 +1,6 @@
+1. Insert 10 data untuk tabel User, Film, Category, dan Artis
+2. Untuk setiap table penghubung (daftar_nonton, category_film, cast) insert minimal 30 data untuk tiap tabel.
+
 INSERT INTO film (film_id, film_name, Publish_date) VALUES 
 (1,'happy old year','2011-12-17'), 
 (2,'from up on poppy hill','2019-04-10'),
